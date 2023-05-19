@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentManager
 import com.kamrul_hasan.dor_dam.R
 import com.kamrul_hasan.dor_dam.adapter.ProductListAdapter
 import com.kamrul_hasan.dor_dam.databinding.FragmentCityCorporationBinding
-import com.kamrul_hasan.dor_dam.model.DummyData
+import com.kamrul_hasan.dor_dam.database.DummyData
 import com.kamrul_hasan.dor_dam.model.Product
 import com.kamrul_hasan.dor_dam.utils.MyApplication
 
@@ -73,8 +73,6 @@ class CityCorporationFragment : Fragment() {
                         ).show()
 
                     }
-
-
             }
 
         val fragmentManager = requireActivity().supportFragmentManager

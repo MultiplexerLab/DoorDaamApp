@@ -1,5 +1,8 @@
-package com.kamrul_hasan.dor_dam.model
+package com.kamrul_hasan.dor_dam.database
 
+import com.kamrul_hasan.dor_dam.model.Bazaar
+import com.kamrul_hasan.dor_dam.model.CityCorporation
+import com.kamrul_hasan.dor_dam.model.Product
 import com.kamrul_hasan.dor_dam.utils.url
 
 class DummyData {
@@ -27,8 +30,11 @@ class DummyData {
             CityCorporation(3, "Khulna", "Khulna", bazaar_list),
             CityCorporation(4, "Rajshahi", "Rajshahi", bazaar_list)
         )
+
         val cityCorporationList = listOf<String>("South Dhaka", "North Dhaka","CTG", "Khulna", "Rajshahi")
         val bazaarList = listOf<String>("Cuptan Bazaar", "Kawran Bazaar","Badda Bazaar", "Thatari Bazaar", "Malibag Bazaar")
+        val districtList = listOf<String>("Dhaka", "CTG", "Khulna", "Rajshahi", "Pabna", "Rajbari")
+        val powroshovaList = listOf<String>("Khoksa", "Pangsha", "Savar")
 
     }
 }

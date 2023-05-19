@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.kamrul_hasan.dor_dam.adapter.ProductListAdapter
 import com.kamrul_hasan.dor_dam.databinding.FragmentLiveStockMinistryBinding
-import com.kamrul_hasan.dor_dam.model.DummyData
+import com.kamrul_hasan.dor_dam.database.DummyData
 
 class LiveStockMinistryFragment : Fragment() {
 

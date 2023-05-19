@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.PowroshovaFragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_area"
+        android:id="@+id/layout_district"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,32 +17,30 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <AutoCompleteTextView
-            android:id="@+id/auto_complete_city_corporation"
+            android:id="@+id/auto_complete_district"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/district"
             android:inputType="none" />
 
-
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_bazaar"
+        android:id="@+id/layout_powroshova"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_area">
+        app:layout_constraintTop_toBottomOf="@id/layout_district">
 
         <AutoCompleteTextView
-            android:id="@+id/auto_complete_bazaar"
+            android:id="@+id/auto_complete_powroshova"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/pourashava"
             android:inputType="none" />
-
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -64,7 +62,6 @@
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_bazaar" />
-
+        app:layout_constraintTop_toBottomOf="@id/layout_powroshova" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
