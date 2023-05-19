@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splash_screen">
+
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.SplashScreenFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_home2_to_dashboardFragment"
+            app:destination="@id/city_corporation" />
+    </fragment>
+    <fragment
+        android:id="@+id/city_corporation"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.CityCorporationFragment"
+        android:label="@string/city_corporation"
+        tools:layout="@layout/fragment_city_corporation" >
+        <action
+            android:id="@+id/action_city_corporation_to_lgd_ministry2"
+            app:destination="@id/lgd_ministry" />
+        <action
+            android:id="@+id/action_city_corporation_to_powroshova2"
+            app:destination="@id/powroshova"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_city_corporation_to_live_stock_ministry2"
+            app:destination="@id/live_stock_ministry" />
+    </fragment>
+    <fragment
+        android:id="@+id/productListFragment"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.ProductListFragment"
+        android:label="product_list"
+        tools:layout="@layout/fragment_product_list" />
+    <fragment
+        android:id="@+id/lgd_ministry"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.LgdMinistryFragment"
+        android:label="@string/lgd_ministry"
+        tools:layout="@layout/fragment_lgd_ministry" >
+    </fragment>
+    <fragment
+        android:id="@+id/live_stock_ministry"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.LiveStockMinistryFragment"
+        android:label="@string/live_stock"
+        tools:layout="@layout/fragment_live_stock_ministry" >
+    </fragment>
+    <fragment
+        android:id="@+id/powroshova"
+        android:name="com.kamrul_hasan.dor_dam.ui.fragment.PowroshovaFragment"
+        android:label="@string/pourashava"
+        tools:layout="@layout/fragment_powroshova" >
+    </fragment>
+
+</navigation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/city_corporation"
+        android:icon="@drawable/city_corporation"
+        android:title=""
+        />
+    <item
+        android:id="@+id/powroshova"
+        android:icon="@drawable/powroshova"
+        android:title="" />
+    <item
+        android:id="@+id/lgd_ministry"
+        android:icon="@drawable/lgd_ministry"
+        android:title="" />
+    <item
+        android:id="@+id/live_stock_ministry"
+        android:icon="@drawable/livestock_ministry"
+        android:title="" />
+</menu>
