@@ -1,11 +1,11 @@
-package com.kamrul_hasan.dor_dam.ui.fragment
+package com.multiplexer.dor_dam.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.kamrul_hasan.dor_dam.databinding.FragmentProductListBinding
+import com.multiplexer.dor_dam.databinding.FragmentProductListBinding
 
 class ProductListFragment : Fragment() {
 

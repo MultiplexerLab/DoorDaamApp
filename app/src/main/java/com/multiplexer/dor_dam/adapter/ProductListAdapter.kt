@@ -1,6 +1,5 @@
-package com.kamrul_hasan.dor_dam.adapter
+package com.multiplexer.dor_dam.adapter
 
-import android.provider.MediaStore.Images
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.kamrul_hasan.dor_dam.R
-import com.kamrul_hasan.dor_dam.model.Product
-import com.kamrul_hasan.dor_dam.utils.MyApplication
+import com.multiplexer.dor_dam.R
+import com.multiplexer.dor_dam.model.Product
+import com.multiplexer.dor_dam.utils.MyApplication
 
 class ProductListAdapter(
     private val productList: List<Product>

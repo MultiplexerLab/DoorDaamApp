@@ -1,9 +1,9 @@
-package com.kamrul_hasan.dor_dam.database
+package com.multiplexer.dor_dam.database
 
-import com.kamrul_hasan.dor_dam.model.Bazaar
-import com.kamrul_hasan.dor_dam.model.CityCorporation
-import com.kamrul_hasan.dor_dam.model.Product
-import com.kamrul_hasan.dor_dam.utils.url
+import com.multiplexer.dor_dam.model.Bazaar
+import com.multiplexer.dor_dam.model.CityCorporation
+import com.multiplexer.dor_dam.model.Product
+import com.multiplexer.dor_dam.utils.url
 
 class DummyData {
 

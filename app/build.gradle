@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace 'com.kamrul_hasan.dor_dam'
+    namespace 'com.multiplexer.dor_dam'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.kamrul_hasan.dor_dam"
+        applicationId "com.multiplexer.dor_dam"
         minSdk 21
         targetSdk 33
         versionCode 1

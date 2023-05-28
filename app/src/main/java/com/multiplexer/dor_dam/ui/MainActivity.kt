@@ -1,16 +1,14 @@
-package com.kamrul_hasan.dor_dam.ui
+package com.multiplexer.dor_dam.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.kamrul_hasan.dor_dam.R
-import com.kamrul_hasan.dor_dam.databinding.ActivityMainBinding
-import com.kamrul_hasan.dor_dam.ui.fragment.CityCorporationFragment
+import com.multiplexer.dor_dam.R
+import com.multiplexer.dor_dam.databinding.ActivityMainBinding
 
 private const val TAG = "MainActivity"
 
@@ -28,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.fragment_host) as NavHostFragment
         navController = navHostFragment.navController
 
-        setupActionBarWithNavController(navController)
+//        setupActionBarWithNavController(navController)
         binding.bottomNavBar.setupWithNavController(navController)
 
         binding.bottomNavBar.setOnItemSelectedListener {
@@ -61,8 +59,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
+   /* override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
-    }
+    }*/
 
 }

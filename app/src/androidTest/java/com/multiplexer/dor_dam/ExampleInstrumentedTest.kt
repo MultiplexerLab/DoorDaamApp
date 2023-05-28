@@ -1,4 +1,4 @@
-package com.kamrul_hasan.dor_dam
+package com.multiplexer.dor_dam
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

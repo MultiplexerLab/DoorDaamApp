@@ -1,4 +1,4 @@
-package com.kamrul_hasan.dor_dam.ui.fragment
+package com.multiplexer.dor_dam.ui.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,13 +9,14 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
-import com.kamrul_hasan.dor_dam.R
-import com.kamrul_hasan.dor_dam.adapter.ProductListAdapter
-import com.kamrul_hasan.dor_dam.databinding.FragmentCityCorporationBinding
-import com.kamrul_hasan.dor_dam.database.DummyData
-import com.kamrul_hasan.dor_dam.model.Product
-import com.kamrul_hasan.dor_dam.utils.MyApplication
+import com.multiplexer.dor_dam.R
+import com.multiplexer.dor_dam.adapter.ProductListAdapter
+import com.multiplexer.dor_dam.databinding.FragmentCityCorporationBinding
+import com.multiplexer.dor_dam.database.DummyData
+import com.multiplexer.dor_dam.model.Product
+import com.multiplexer.dor_dam.utils.MyApplication
 
 class CityCorporationFragment : Fragment() {
 
@@ -66,17 +67,23 @@ class CityCorporationFragment : Fragment() {
                     AdapterView.OnItemClickListener { adapterView, view, i, l ->
                         val itemSelected = adapterView.getItemAtPosition(i)
 
-                        binding.rvCityCorporationProducts.adapter = ProductListAdapter(DummyData.productList)
+                        binding.rvCityCorporationProducts.adapter =
+                            ProductListAdapter(DummyData.productList)
 
                         Toast.makeText(
-                            MyApplication.appContext, "Item $itemSelected Selected.", Toast.LENGTH_SHORT
+                            MyApplication.appContext,
+                            "Item $itemSelected Selected.",
+                            Toast.LENGTH_SHORT
                         ).show()
 
                     }
             }
 
         val fragmentManager = requireActivity().supportFragmentManager
-        fragmentManager.popBackStack("SplashScreenFragment", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        fragmentManager.popBackStack(
+            "SplashScreenFragment",
+            FragmentManager.POP_BACK_STACK_INCLUSIVE
+        )
 
         requireActivity().onBackPressedDispatcher.addCallback(
             viewLifecycleOwner,
@@ -87,6 +94,18 @@ class CityCorporationFragment : Fragment() {
 
             })
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+        //hide action bar
+        (activity as AppCompatActivity).supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        //show action bar
+        (activity as AppCompatActivity).supportActionBar?.show()
     }
 
 }

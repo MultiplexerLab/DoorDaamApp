@@ -1,4 +1,4 @@
-package com.kamrul_hasan.dor_dam.ui.fragment
+package com.multiplexer.dor_dam.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,12 +8,12 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.kamrul_hasan.dor_dam.R
-import com.kamrul_hasan.dor_dam.adapter.ProductListAdapter
-import com.kamrul_hasan.dor_dam.database.DummyData
-import com.kamrul_hasan.dor_dam.databinding.FragmentPowroshovaBinding
-import com.kamrul_hasan.dor_dam.model.Product
-import com.kamrul_hasan.dor_dam.utils.MyApplication
+import com.multiplexer.dor_dam.R
+import com.multiplexer.dor_dam.adapter.ProductListAdapter
+import com.multiplexer.dor_dam.database.DummyData
+import com.multiplexer.dor_dam.databinding.FragmentPowroshovaBinding
+import com.multiplexer.dor_dam.model.Product
+import com.multiplexer.dor_dam.utils.MyApplication
 
 
 class PowroshovaFragment : Fragment() {

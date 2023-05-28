@@ -1,4 +1,4 @@
-package com.kamrul_hasan.dor_dam.model
+package com.multiplexer.dor_dam.model
 
 data class Product(
     val product_id: Int,
