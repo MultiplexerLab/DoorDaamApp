@@ -3,19 +3,19 @@
 
     <item
         android:id="@+id/city_corporation"
-        android:icon="@drawable/city_corporation"
-        android:title="@string/empty_string" />
+        android:icon="@drawable/city_building_logo"
+        android:title="@string/city_corpo_" />
     <item
         android:id="@+id/powroshova"
-        android:icon="@drawable/powroshova"
-        android:title="@string/empty_string" />
+        android:icon="@drawable/powro_building"
+        android:title="@string/pourashava" />
     <item
         android:id="@+id/lgd_ministry"
-        android:icon="@drawable/lgd_ministry"
-        android:title="@string/empty_string" />
+        android:icon="@drawable/bd_gov_logo"
+        android:title="@string/lgd" />
 
     <item
         android:id="@+id/live_stock_ministry"
-        android:icon="@drawable/livestock_ministry"
-        android:title="@string/empty_string" />
+        android:icon="@drawable/cow_icon"
+        android:title="@string/live_stock_" />
 </menu>

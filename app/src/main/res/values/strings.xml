@@ -8,7 +8,7 @@
     <string name="gov">gov</string>
     <string name="product">product</string>
     <string name="product_name">পণ্যের নাম</string>
-    <string name="_00">০০ ৳</string>
+    <string name="unit_price">০০ ৳ / কেজি</string>
     <string name="_1_kg">1 kg</string>
     <string name="area">এলাকা</string>
     <string name="bazaar">বাজার</string>
@@ -16,5 +16,12 @@
     <string name="live_stock">প্রাণিসম্পদ মন্ত্রণালয়</string>
     <string name="product_list">পণ্য তালিকা</string>
     <string name="welcome">দর দামে \n\n    আপনাকে স্বাগতম</string>
-    <string name="empty_string"></string>
+    <string name="select_bazaar">অনুগ্রহ করে সিটি কর্পোরেশন \n এবং \n বাজার নির্বাচন করুন</string>
+    <string name="lgd">এল জি ডি</string>
+    <string name="live_stock_">প্রাণীসম্পদ</string>
+    <string name="city_corpo_">সিটি কর্পো.</string>
+    <string name="no_connection">সংযোগ নেই</string>
+    <string name="back_online">ইন্টারনেট এসেছে</string>
+    <string name="please_check_your_connection">অনুগ্রহ করে ইন্টারনেট সংযোগ করুন!</string>
+    <string name="city_corpo">সিটি কর্পো.</string>
 </resources>

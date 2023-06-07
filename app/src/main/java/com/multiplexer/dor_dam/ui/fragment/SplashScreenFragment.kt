@@ -32,26 +32,34 @@ class SplashScreenFragment : Fragment() {
         // logo animation
         binding.ivLogo.animate().scaleX(0.5f).scaleY(0.5f).duration = 1200
         Handler(Looper.getMainLooper()).postDelayed({
-            binding.ivLogo.animate().scaleX(1.0f).scaleY(1.0f).duration = 1200
+            binding.ivLogo.animate().scaleX(1.5f).scaleY(1.5f).duration = 1200
         }, 1200)
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.ivLogo.animate().scaleX(0.5f).scaleY(0.5f).duration = 1200
+        }, 2400)
+        Handler(Looper.getMainLooper()).postDelayed({
+            binding.ivLogo.animate().scaleX(1.0f).scaleY(1.0f).duration = 1200
+        }, 3600)
 
         //welcome massage animation
-        binding.tvWelcome.animate().rotation(360f).translationXBy(-134f).translationYBy(-134f).duration = 2000
+//        binding.tvWelcome.animate().rotation(360f).translationXBy(-134f).translationYBy(-134f).duration = 2000
 
         Handler(Looper.getMainLooper()).postDelayed({
-                findNavController().navigate(R.id.city_corporation)
-            }, 4000)
+            findNavController().navigate(R.id.city_corporation)
+        }, 5000)
     }
 
     override fun onResume() {
         super.onResume()
 //        (activity as AppCompatActivity).supportActionBar?.hide()
-        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_bar).visibility = View.GONE
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_bar).visibility =
+            View.GONE
     }
 
     override fun onStop() {
         super.onStop()
 //        (activity as AppCompatActivity).supportActionBar?.show()
-        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_bar).visibility = View.VISIBLE
+        requireActivity().findViewById<BottomNavigationView>(R.id.bottom_nav_bar).visibility =
+            View.VISIBLE
     }
 }

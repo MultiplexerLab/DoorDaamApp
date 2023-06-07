@@ -2,13 +2,17 @@ package com.multiplexer.dor_dam.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.multiplexer.dor_dam.R
 import com.multiplexer.dor_dam.databinding.ActivityMainBinding
+import com.multiplexer.dor_dam.network.NetworkConnection
 
 private const val TAG = "MainActivity"
 
@@ -55,6 +59,22 @@ class MainActivity : AppCompatActivity() {
                 else -> {
                     false
                 }
+            }
+        }
+
+        NetworkConnection().observe(this){
+            if(it){
+                binding.tvNoConnection.setBackgroundResource(R.color.primaryColor)
+                binding.tvNoConnection.text = resources.getString(R.string.back_online)
+
+                Handler(Looper.getMainLooper()).postDelayed({
+                    binding.tvNoConnection.visibility = View.GONE
+                }, 1500)
+
+            }else{
+                binding.tvNoConnection.text = resources.getString(R.string.no_connection)
+                binding.tvNoConnection.setBackgroundResource(R.color.gray)
+                binding.tvNoConnection.visibility = View.VISIBLE
             }
         }
     }
