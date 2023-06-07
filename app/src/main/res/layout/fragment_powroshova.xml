@@ -1,67 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="5dp"
+    android:background="@color/gray_white"
     tools:context=".ui.fragment.PowroshovaFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_district"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+    <!--  top actionbar  -->
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_height="55dp"
+        android:background="@color/primaryColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_title"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete_district"
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/logo_background"
+            android:padding="2dp"
+            android:src="@drawable/dor_logo" />
+
+        <TextView
+            android:id="@+id/tv_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/district"
-            android:inputType="none" />
+            android:layout_height="55dp"
+            android:padding="16dp"
+            android:text="@string/pourashava"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/layout_powroshova"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+<!--    selection panel-->
+    <LinearLayout
+        android:id="@+id/layout_district_bazaar"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@color/green_light"
+        android:orientation="horizontal"
+        android:weightSum="6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_district">
+        app:layout_constraintTop_toBottomOf="@id/layout_title">
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete_powroshova"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_district"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/pourashava"
-            android:inputType="none" />
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/district"
+            android:textColor="@color/primaryColorVariant"
+            android:textSize="14sp" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/spinner_dropdown_district"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:padding="5dp" />
 
-    <!-- <ImageView
-         android:id="@+id/iv_search"
-         android:layout_width="60dp"
-         android:layout_height="60dp"
-         android:layout_margin="16dp"
-         android:src="@drawable/icon_search"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@id/layout_bazaar" />-->
+        <TextView
+            android:id="@+id/tv_district_bazaar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="@string/bazaar"
+            android:textColor="@color/primaryColorVariant"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spinner_dropdown_bazaar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.2"
+            android:padding="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_product_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/product_list"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_district_bazaar" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_city_corporation_products"
+        android:id="@+id/rv_district_products"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_light"
+        android:paddingTop="2dp"
+        android:paddingBottom="5dp"
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_powroshova" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_list_title" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/iv_cloud_off"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/icon_loading"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_no_connection_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/please_check_your_connection"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_cloud_off" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
