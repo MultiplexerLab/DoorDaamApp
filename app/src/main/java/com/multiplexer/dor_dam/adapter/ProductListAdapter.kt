@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.multiplexer.dor_dam.R
+import com.kamrul_hasan.dor_dam.R
 import com.multiplexer.dor_dam.model.Product
 import com.multiplexer.dor_dam.utils.MyApplication
 

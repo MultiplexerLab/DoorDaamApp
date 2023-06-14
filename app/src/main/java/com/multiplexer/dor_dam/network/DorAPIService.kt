@@ -19,6 +19,6 @@ interface DorAPIService {
     //api service interface
 }
 
-object DorDaamApi{
+object DorDaamApi {
     val retrofitService: DorAPIService by lazy { retrofit.create(DorAPIService::class.java) }
 }

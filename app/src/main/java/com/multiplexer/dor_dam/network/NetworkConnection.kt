@@ -11,7 +11,7 @@ import android.os.Build
 import androidx.lifecycle.LiveData
 import com.multiplexer.dor_dam.utils.MyApplication
 
-class NetworkConnection: LiveData<Boolean>() {
+class NetworkConnection : LiveData<Boolean>() {
     private val connectivityManager: ConnectivityManager =
         MyApplication.appContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
     private lateinit var networkConnectionCallback: ConnectivityManager.NetworkCallback
@@ -19,12 +19,17 @@ class NetworkConnection: LiveData<Boolean>() {
     override fun onActive() {
         super.onActive()
         updateNetwork()
-        when{
-            Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ->{
+        when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.N -> {
                 connectivityManager.registerDefaultNetworkCallback(connectionCallBack())
-            }else ->{
-            MyApplication.appContext.registerReceiver(networkReceiver, IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION))
-        }
+            }
+
+            else -> {
+                MyApplication.appContext.registerReceiver(
+                    networkReceiver,
+                    IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION)
+                )
+            }
         }
     }
 
@@ -32,14 +37,15 @@ class NetworkConnection: LiveData<Boolean>() {
         val networkConnection: NetworkInfo? = connectivityManager.activeNetworkInfo
         postValue(networkConnection?.isConnected == true)
     }
-    private val networkReceiver = object : BroadcastReceiver(){
+
+    private val networkReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
             updateNetwork()
         }
     }
 
-    private fun connectionCallBack(): ConnectivityManager.NetworkCallback{
-        networkConnectionCallback = object : ConnectivityManager.NetworkCallback(){
+    private fun connectionCallBack(): ConnectivityManager.NetworkCallback {
+        networkConnectionCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onAvailable(network: Network) {
                 super.onAvailable(network)
                 postValue(true)
